@@ -261,7 +261,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Estilos para el overlay con el botón */
 .info-juego {
     position: absolute;
     top: 0;

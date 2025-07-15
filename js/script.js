@@ -1,9 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initSmoothScrolling();
-    // initScrollAnimations(); // Comentada para evitar error
-    // initGameCardFlip(); // Comentada para evitar error
-    // initActiveNavLinks(); // Comentada para evitar error
     initSeleccionJuegoInfo();
     initNavActiveSection();
 });
@@ -54,17 +51,14 @@ function initSmoothScrolling() {
 
 function initSeleccionJuegoInfo() {
     const areaSeleccion = document.getElementById('juego-seleccionado');
-    // Delegación de eventos sobre el contenedor de la grilla
     const grid = document.querySelector('.juegos-grid');
     if (!grid) return;
 
     grid.addEventListener('click', function(e) {
         const boton = e.target.closest('.btn');
         if (!boton) return;
-        // Buscar el contenedor .juego más cercano
         let juegoDiv = boton.closest('.juego');
         if (!juegoDiv) return;
-        // Buscar la info-juego dentro del mismo .juego
         let info = juegoDiv.querySelector('.info-juego');
         if (!info) {
             areaSeleccion.innerHTML = '<div class="info-juego-seleccionado">No se encontró la información del juego.</div>';
@@ -72,18 +66,17 @@ function initSeleccionJuegoInfo() {
             return;
         }
         console.log('HTML de .info-juego:', info.innerHTML);
-        // Extraer datos
+
         const titulo = info.querySelector('h3')?.textContent.trim() || '';
         const plataforma = Array.from(info.querySelectorAll('p')).find(p => p.innerText.includes('Plataforma'))?.innerHTML || '';
         const genero = Array.from(info.querySelectorAll('p')).find(p => p.innerText.includes('Género'))?.innerHTML || '';
         const fecha = Array.from(info.querySelectorAll('p')).find(p => p.innerText.includes('Fecha'))?.innerHTML || '';
         const descripcion = Array.from(info.querySelectorAll('p')).find(p => p.innerText.includes('Descripción'))?.innerHTML || '';
-        // Depuración
         if (!titulo && !plataforma && !genero && !fecha && !descripcion) {
             console.log('No se extrajo ningún dato de .info-juego. Revisa la estructura del HTML.');
         }
         console.log('Datos extraídos:', {titulo, plataforma, genero, fecha, descripcion});
-        // Construir HTML
+        
         areaSeleccion.innerHTML = `
             <div class="info-juego-seleccionado">
                 <h3>${titulo}</h3>
@@ -96,7 +89,6 @@ function initSeleccionJuegoInfo() {
     });
 }
 
-// --- NAV ACTIVE SECTION ---
 function initNavActiveSection() {
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = Array.from(navLinks).map(link => {
@@ -122,12 +114,10 @@ function initNavActiveSection() {
     }
 
     window.addEventListener('scroll', onScroll);
-    // También actualizar al hacer click
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            setTimeout(onScroll, 400); // Espera a que el scroll termine
+            setTimeout(onScroll, 400);
         });
     });
-    // Inicializar
     onScroll();
 }
