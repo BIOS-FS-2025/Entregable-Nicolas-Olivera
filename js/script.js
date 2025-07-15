@@ -60,23 +60,13 @@ function initSeleccionJuegoInfo() {
         let juegoDiv = boton.closest('.juego');
         if (!juegoDiv) return;
         let info = juegoDiv.querySelector('.info-juego');
-        if (!info) {
-            areaSeleccion.innerHTML = '<div class="info-juego-seleccionado">No se encontró la información del juego.</div>';
-            console.log('No se encontró el div .info-juego dentro de la tarjeta:', juegoDiv);
-            return;
-        }
-        console.log('HTML de .info-juego:', info.innerHTML);
 
         const titulo = info.querySelector('h3')?.textContent.trim() || '';
         const plataforma = Array.from(info.querySelectorAll('p')).find(p => p.innerText.includes('Plataforma'))?.innerHTML || '';
         const genero = Array.from(info.querySelectorAll('p')).find(p => p.innerText.includes('Género'))?.innerHTML || '';
         const fecha = Array.from(info.querySelectorAll('p')).find(p => p.innerText.includes('Fecha'))?.innerHTML || '';
         const descripcion = Array.from(info.querySelectorAll('p')).find(p => p.innerText.includes('Descripción'))?.innerHTML || '';
-        if (!titulo && !plataforma && !genero && !fecha && !descripcion) {
-            console.log('No se extrajo ningún dato de .info-juego. Revisa la estructura del HTML.');
-        }
-        console.log('Datos extraídos:', {titulo, plataforma, genero, fecha, descripcion});
-        
+
         areaSeleccion.innerHTML = `
             <div class="info-juego-seleccionado">
                 <h3>${titulo}</h3>
