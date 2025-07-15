@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">🎮 InfoJuegos</div>
+          <ul class="nav-menu">
+            <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+            <li><a href="#juegos" class="nav-link">Juegos</a></li>
+            <li>
+              <a href="#sobre-nosotros" class="nav-link">Sobre Nosotros</a>
+            </li>
+          </ul>
+          <div class="nav-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <h1>Bienvenido a InfoJuegos!</h1>
+        <p>Tu fuente de información sobre videojuegos</p>
+      </div>
+      <div class="hero-image">
+        <img src="img/joystick.png" alt="joystick" />
+      </div>
+    </section>
+
+    <main>
+      <section id="juegos" class="juegos-lista">
+        <div class="container">
+          <h2 class="section-title">Juegos Destacados</h2>
+          <p>Descubre los juegos más populares del momento.</p>
+          <div class="juego-seleccionado" id="juego-seleccionado">
+            <p id="seleccion">Selecciona el juego para ver su información.</p>
+          </div>
+        </div>
+        <div class="juegos-grid">
+          <div class="juego">
+            <div class="imagen">
+              <img
+                src="img/The_Legend_of_Zelda_Breath_of_the_Wild.jpg"
+                alt="The Legend of Zelda: Breath of the Wild"
+              />
+            </div>
+            <div class="info-juego">
+              <h3>The Legend of Zelda: Breath of the Wild</h3>
+              <p><strong>Plataforma:</strong> Nintendo Switch, Wii U</p>
+              <p><strong>Género:</strong> Aventura, Acción</p>
+              <p><strong>Fecha de lanzamiento:</strong> 3 de marzo de 2017</p>
+              <p>
+                <strong>Descripción:</strong> Un vasto mundo abierto donde los
+                jugadores pueden explorar, resolver acertijos y enfrentarse a
+                enemigos en una épica aventura.
+              </p>
+              <button class="btn">Seleccionar Juego</button>
+            </div>
+          </div>
+          <div class="juego">
+            <div class="imagen">
+              <img src="img/God_of_War_4.jpg" alt="God of War 4" />
+            </div>
+            <div class="info-juego">
+              <h3>God of War 4</h3>
+              <p><strong>Plataforma:</strong> PlayStation 4</p>
+              <p><strong>Género:</strong> Aventura, Acción</p>
+              <p><strong>Fecha de lanzamiento:</strong> 20 de abril de 2018</p>
+              <p>
+                <strong>Descripción:</strong> Un reinicio de la saga que sigue a
+                Kratos y su hijo Atreus en una aventura mitológica en un mundo
+                lleno de dioses y criaturas.
+              </p>
+              <button class="btn">Seleccionar Juego</button>
+            </div>
+          </div>
+          <div class="juego">
+            <div class="imagen">
+              <img src="img/halo.jpg" alt="Halo" />
+            </div>
+            <div class="info-juego">
+              <h3>Halo</h3>
+              <p><strong>Plataforma:</strong> Xbox One</p>
+              <p><strong>Género:</strong> Shooter, Acción</p>
+              <p>
+                <strong>Fecha de lanzamiento:</strong> 27 de octubre de 2015
+              </p>
+              <p>
+                <strong>Descripción:</strong> Un shooter en primera persona que
+                sigue las aventuras del Jefe Maestro en un universo lleno de
+                conflictos intergalácticos.
+              </p>
+              <button class="btn">Seleccionar Juego</button>
+            </div>
+          </div>
+          <div class="juego">
+            <div class="imagen">
+              <img src="img/FFVIIRemake.png" alt="Final Fantasy VII Remake" />
+            </div>
+            <div class="info-juego">
+              <h3>Final Fantasy VII Remake</h3>
+              <p>
+                <strong>Plataforma:</strong> PlayStation 4, PlayStation 5, PC
+              </p>
+              <p><strong>Género:</strong> RPG, Acción</p>
+              <p><strong>Fecha de lanzamiento:</strong> 10 de abril de 2020</p>
+              <p>
+                <strong>Descripción:</strong> Un remake del clásico juego de rol
+                que sigue la historia de Cloud Strife y sus compañeros en su
+                lucha contra Shinra y Sephiroth.
+              </p>
+              <button
+                class="btn"
+              >
+                Seleccionar Juego
+              </button>
+            </div>
+          </div>
+          <div class="juego">
+            <div class="imagen">
+              <img src="img/mario.png" alt="Super Mario Odyssey" />
+            </div>
+            <div class="info-juego">
+              <h3>Super Mario Odyssey</h3>
+              <p><strong>Plataforma:</strong> Nintendo Switch</p>
+              <p><strong>Género:</strong> Plataformas, Aventura</p>
+              <p>
+                <strong>Fecha de lanzamiento:</strong> 27 de octubre de 2017
+              </p>
+              <p>
+                <strong>Descripción:</strong> Un juego de plataformas en 3D que
+                sigue a Mario en su aventura para rescatar a la Princesa Peach
+                de Bowser.
+              </p>
+              <button
+                class="btn"
+              >
+                Seleccionar Juego
+              </button>
+            </div>
+          </div>
+          <div class="juego">
+            <div class="imagen">
+              <img src="img/The_Last_of_Us_Part_I.jpg" alt="The Last of Us Part I" />
+            </div>
+            <div class="info-juego">
+              <h3>The Last of Us Part I</h3>
+              <p><strong>Plataforma:</strong> PlayStation 5, PC</p>
+              <p><strong>Género:</strong> Acción, Aventura</p>
+              <p>
+                <strong>Fecha de lanzamiento:</strong> 19 de septiembre de 2022
+              </p>
+              <p>
+                <strong>Descripción:</strong> Un remake del aclamado juego de
+                acción y aventura que sigue la historia de Joel y Ellie en un
+                mundo post-apocalíptico.
+              </p>
+              <button
+                class="btn"
+              >
+                Seleccionar Juego
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="sobre-nosotros">
+      <div class="container">
+        <div class="contenido-footer">
+          <div class="seccion-footer">
+            <h3>InfoJuegos</h3>
+            <p></p>
+            <div class="redes-sociales">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="seccion-footer">
+            <h4>Secciones</h4>
+            <ul>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#juegos">Juegos</a></li>
+            </ul>
+          </div>
+          <div class="seccion-footer">
+            <h4>Contacto</h4>
+            <ul>
+              <li><i class="fas fa-envelope"></i> info@infojuegos.com</li>
+              <li><i class="fas fa-phone"></i> +598 12345678</li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Calle Falsa 123, Ciudad
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Info Juegos. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
